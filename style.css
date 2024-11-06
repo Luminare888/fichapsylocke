@@ -1,0 +1,67 @@
+.PsyFicha {
+  --fuente2: 'Kleemax';
+  --fuente1: 'Poppins';
+  --acento1:#A230BE;
+  --acento2:#6F2B8C;
+  --acento3:#351C40;
+  --blanco:#fff;
+  --negro:#000;
+  --gris:#282828;
+  --gradient1:linear-gradient(181deg, var(--acento1), var(--acento3) 60%);
+  --gradient2:linear-gradient(90deg, var(--acento2), var(--acento3));
+  --gradient3:linear-gradient(45deg, black, var(--gris));
+  --ninja:url(https://i.servimg.com/u/f10/19/83/90/79/evol_610.png); 
+  --psylocke:url(https://i.servimg.com/u/f10/19/83/90/79/ddu7s910.png);
+}
+
+@font-face { font-family: "Kleemax"; src: url( https://dl.dropboxusercontent.com/scl/fi/c9sebz6zkhs473dyn9j51/KleemaxDEMO.ttf?rlkey=4u5fb3ly3f4oq2f0fq7lsgpdu&st=h76budx4&dl=0); font-weight: 300; font-style: normal; }
+@font-face {
+  font-family: 'Poppins';
+  src: url(Poppins-Medium.ttf);
+}
+
+.PsyFicha ::-webkit-scrollbar { width: 5px; height:5px; border-radius:5px;}
+.PsyFicha ::-webkit-scrollbar-track { background-color: var(--negro); border-radius:5px;}
+.PsyFicha ::-webkit-scrollbar-thumb { background: var(--acento3); border-radius:10px;}
+
+.PsyFicha { margin:20px auto 20px; display: grid; width:750px; height: 960px; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(5, 1fr); grid-column-gap: 0px; grid-row-gap: 5px; }
+.PsyFicha br { display:none; }
+.TopBack { grid-area: 1 / 1 / 3 / 4; background:var(--acento1); border-radius:10px; height:300px; background-image:var(--ninja); background-size:50%; background-repeat:no-repeat; background-position:110% -140%;}
+.MidBack { grid-area: 3 / 1 / 5 / 4; background:var(--gradient1); border-radius:10px; height: 500px; margin-top: -15px}
+.BotBack { grid-area: 5 / 1 / 6 / 4; background:var(--gradient2); border-radius:10px; height: 300px; margin-top: 5px }
+.Psyheader { grid-area: 1 / 1 / 2 / 4; z-index:1; height:100px; display:flex; flex-flow:column; gap:10px; align-items:center; justify-content:center; color:var(--negro); font-size:70px; font-family:var(--fuente2); text-transform:uppercase; line-height:30px; padding-top:40px;}
+.Psyheader h5 {margin-top: 0px; font-family:var(--fuente1); font-size:20px; color:var(--blanco); font-style:italic;}
+.Psyaboutme { grid-area: 2 / 1 / 4 / 3; background:var(--negro); z-index:1; padding:20px 10px 5px; border-radius:10px; margin-left:20px; margin-top:-40px; margin-right:50px; height:350px;  display:flex; flex-flow:column; gap:5px;}
+.Psyaboutme h5 { font-family:var(--fuente2); font-size:35px; color:var(--negro); text-transform:uppercase; text-align:center; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: var(--acento2); line-height:20px; margin-top: 0px}
+.psydata { display:flex; flex-flow:column wrap; gap:3px; font-family:var(--fuente1); font-size:12px; font-weight:500; color:var(--blanco); padding:5px 10px 0; text-transform:uppercase; height:120px; margin-top: -50px; }
+.psydata dato { background: var(--gradient3); border-radius: 4px; text-align: center; display: flex; align-items: center; justify-content: space-between; padding: 0 10px; font-size: 10px;}
+.psytext { height:165px; font-family:var(--fuente1); font-size:12px; font-weight:500; color:var(--blanco); text-align:justify; padding:0 10px; overflow:auto;}
+.psytext br { display:inline; }.psydata b { color:var(--acento1);}
+.Psyimabig { grid-area: 1 / 3 / 3 / 4; z-index:2; background:var(--psylocke); background-size:cover;  margin-top:30px; margin-left:420px; height:440px; width:300px; position:absolute;}
+.Psyiconis { grid-area: 3 / 3 / 4 / 4; z-index:3; width:250px; height:150px; display:flex; align-items:center; justify-content:center; gap:10px;}
+.Psyiconis img { border-radius:10px; margin-top:40px; width: 100px; height: 100px}
+.Psystats { grid-area: 4 / 1 / 5 / 2; height: 240px; z-index:1; margin-left:20px; margin-top:-80px; margin-bottom:10px; }
+.Psystats h5 { font-family:var(--fuente2); font-size:40px; color:var(--negro); text-align:center; margin-top: 10px; }
+.psystatis { display:flex; flex-flow:row wrap; gap:5px; height:220px; margin-top: -60px }
+.psystatis stat { background:var(--negro); display:flex; flex-flow:column; align-items:center; justify-content:center; font-family:var(--fuente1); line-height: 20px; color:var(--acento2); width:48%; font-size:50px; font-weight:900; padding-top:5px; height:70px; margin-top: 0px; }
+.psystatis e { font-size:12px; font-weight:500; color:var(--blanco); z-index:2; margin-bottom:-20px; text-transform:uppercase;}
+.psystatis stat:nth-child(1) { border-radius:10px 0 0 0; }
+.psystatis stat:nth-child(2) { border-radius:0 10px 0 0; }
+.psystatis stat:nth-child(5) { border-radius:0 0 0 10px; }
+.psystatis stat:nth-child(6) { border-radius:0 0 10px 0; }
+
+.Psyskills { grid-area: 4 / 2 / 5 / 4; z-index:1; background:var(--negro); margin-left:10px; margin-top:-60px; margin-bottom:20px; margin-right:20px; border-radius: 0 20px 20px; padding:10px; margin-top: -70px; height: 270px; }
+.Psyskills h5 { font-family:var(--fuente2); font-size:32px; color:var(--negro); text-transform:uppercase; text-align:center; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: var(--acento2); line-height:30px; margin-top: 0px}
+.psyhabilidades { height:225px; padding:0 10px 0 0; display:flex; flex-flow:column; gap:5px; margin-top: 5px; overflow:auto; margin-top: -40px; }
+.psyhabilidades habi { background:var(--gradient3); border-radius:5px; padding:10px; display: flex; flex-flow:column; gap:3px; font-family:var(--fuente1); color:var(--blanco); text-align: left; line-height:14px; font-size:11px; }
+.psyhabilidades b { color:var(--acento1); text-transform:uppercase; font-size:12px;}
+.psyhabilidades dato { background: var(--gradient3); border-radius: 4px; text-align: center; display: flex; align-items: center; justify-content: space-between; padding: 0 10px; font-size: 10px; font-family:var(--fuente1); font-size:12px; font-weight:500; color:var(--blanco); text-transform: uppercase}
+.psyhabilidades hab { font-family:var(--fuente1); color:var(--blanco); text-align: left; font-size:11px; }
+
+.Psyimasmall { grid-area: 5 / 1 / 6 / 2; z-index:1; background-image:var(--ninja); background-size: cover; background-repeat:no-repeat; background-position:-30px 50%; width:280px; height:300px; display:flex; align-items:center; justify-content:center; margin-top: 5px}
+.psyicon { width:170px; height:170px; border-radius:10px; outline:5px solid var(--acento3); background-size: cover}
+.Psyhistory { grid-area: 5 / 2 / 6 / 4; z-index:1; width:450px; height:200px; margin-right:-50px; padding-top:10px;}
+.Psyhistory h5 { font-family:var(--fuente2); font-size:40px; color:var(--negro); text-align:center; line-height: 40px; margin-top: 15px}
+.psyhisto { height:135px; font-family:var(--fuente1); font-size:12px; overflow:auto; color:var(--blanco); text-align:justify; padding-right:10px; display: flex; flex-flow: column; gap: 5px; list-style: none; }
+.psyhabilidades li { margin-left: 35px; margin-right: 60px; } .psyhabilidades li::before { content: '◆'; margin-left: -18px; margin-right: 10px; position: relative; color: var(--acento1);}
+.psyhabilidades ha { margin-left: 95px; } .psyhabilidades ha::before { content: '●'; margin-left: -18px; margin-right: 10px; position: relative; color: var(--acento1);}
